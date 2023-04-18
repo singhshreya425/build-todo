@@ -7,15 +7,18 @@ const Navbar = () => {
     const links =[
         {
             id : 1,
-            link : "Home"
+            link : "/",
+            type : 'Home'
         },
         {
             id : 2,
-            link : "Contact"
+            link : "Contact",
+            type : 'Contact'
         },
         {
             id : 3,
-            link : "Task"
+            link : "Task",
+            type : "Task"
         },
     ]
   return (
@@ -23,8 +26,8 @@ const Navbar = () => {
     h-20 px-4 text-white bg-gradient-to-b
     from-white to-gray-200'>
         <ul className='hidden md:flex'>
-        {links.map(({id , link})=> <li key={id} className=' text-xl px-4 cursor-pointer capitalize text-gray-800
-            hover:scale-105 duration-200'><Link to={link} smooth duration={500}>{link}</Link> </li>)}    
+        {links.map(({id , link , type})=> <li key={id} className=' text-xl px-4 cursor-pointer capitalize text-gray-800
+            hover:scale-105 duration-200'><Link to={link} smooth duration={500}>{type}</Link> </li>)}    
         </ul>
         <div onClick={()=> setNav(!nav) } className=' cursor-pointer text-gray-400 pr-2 z-10 hover:scale-105 duration-200 md:hidden'>
             {nav ?  <FaTimes size={30}

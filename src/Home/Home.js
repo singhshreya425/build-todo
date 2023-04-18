@@ -1,10 +1,14 @@
 import React from 'react'
+import Courosel from './Courosel'
+import WelcomeCard from './WelcomeCard'
+
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <>
+    <Courosel/>
+    <WelcomeCard/>
+    </>
   )
 }
 
